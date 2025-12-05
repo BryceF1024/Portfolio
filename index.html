@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryce Fudge — Software Engineer & IT Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* --- Reset & Base --- */
+* {box-sizing:border-box; margin:0; padding:0;}
+body {font-family:'Inter',sans-serif; background:linear-gradient(180deg,#f0f4f8,#ffffff); color:#111827; line-height:1.6; scroll-behavior:smooth;}
+.container {max-width:1200px; margin:0 auto; padding:32px;}
+h1,h2,h3 {color:#111827;}
+a {text-decoration:none; transition:0.3s;}
+
+/* --- Header --- */
+header {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding-bottom:24px; position:sticky; top:0; background:#f0f4f8; z-index:1000; box-shadow:0 3px 6px rgba(0,0,0,0.05);}
+.brand {display:flex; align-items:center; gap:16px;}
+.avatar {width:70px; height:70px; border-radius:12px; background:#2563eb; display:flex; justify-content:center; align-items:center; color:white; font-weight:800; font-size:28px;}
+nav a {margin-left:16px; font-weight:600; color:#374151;}
+nav a:hover {color:#2563eb;}
+
+/* --- Hero --- */
+.hero {display:grid; grid-template-columns:1fr 400px; gap:32px; margin-top:32px; align-items:center; animation:fadeIn 1s ease;}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-right{order:-1}}
+.hero h1 {font-size:42px; margin-bottom:16px; line-height:1.2;}
+.hero p {font-size:18px; color:#4b5563; margin-bottom:20px;}
+.cta {display:inline-block; padding:12px 18px; border-radius:12px; font-weight:700; transition:0.3s; cursor:pointer;}
+.cta-primary {background:#2563eb; color:white;}
+.cta-primary:hover {background:#1e40af; transform:translateY(-2px);}
+.cta-secondary {background:white; color:#2563eb; border:2px solid #2563eb; margin-left:10px;}
+.cta-secondary:hover {background:#e0f2fe; transform:translateY(-2px);}
+
+/* --- Cards --- */
+.card {background:white; border-radius:16px; padding:24px; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition:0.3s; position:relative; overflow:hidden;}
+.card:hover {box-shadow:0 20px 45px rgba(0,0,0,0.1); transform:translateY(-5px);}
+.project-title {font-weight:700; margin-bottom:6px;}
+.meta {font-size:13px; color:#6b7280; margin-bottom:6px;}
+.small {font-size:13px; color:#6b7280;}
+
+/* --- Skills --- */
+.skills {display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+.pill {background:#eef2ff; color:#0f172a; padding:6px 12px; border-radius:999px; font-weight:600; font-size:14px; border:1px solid #dbeafe; transition:0.3s;}
+.pill:hover{background:#2563eb; color:white;}
+.skill-group {margin-top:16px;}
+.skill-group-title {font-weight:700; margin-bottom:6px; color:#2563eb;}
+
+/* --- Projects Grid --- */
+.projects {display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:20px;}
+@media(max-width:900px){.projects{grid-template-columns:1fr}}
+
+/* --- Project Images Placeholder --- */
+.project-img {width:100%; height:150px; border-radius:12px; background:linear-gradient(135deg,#2563eb,#3b82f6); margin-bottom:12px; animation:pulse 2s infinite;}
+
+/* --- Coursework --- */
+.coursework {margin-top:32px; display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+@media(max-width:900px){.coursework{grid-template-columns:1fr}}
+.coursework .card {background:#fef3c7; transition:0.3s;}
+.coursework .card:hover{transform:translateY(-5px);}
+
+/* --- Contact --- */
+form{display:grid; gap:12px; margin-top:12px;}
+input,textarea{padding:12px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px;}
+textarea{min-height:120px; resize:vertical;}
+button{background:#10b981; color:white; border:none; padding:12px; border-radius:8px; font-weight:700; cursor:pointer; transition:0.3s;}
+button:hover
+button:disabled{opacity:0.6; cursor:not-allowed;}
+.social-links a{margin-right:12px; color:#2563eb; font-weight:700; transition:0.3s;}
+.social-links a:hover
+
+/* --- Footer --- */
+footer{margin-top:40px; padding:24px 0; text-align:center; font-size:14px; color:#6b7280;}
+
+/* --- Animations --- */
+@keyframes fadeIn{from{opacity:0; transform:translateY(10px);}to{opacity:1; transform:translateY(0);}}
+@keyframes pulse{0%{opacity:0.6;}50%{opacity:1;}100%{opacity:0.6;}} </style>
+
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="brand">
+    <div class="avatar">BF</div>
+    <div>
+      <div style="font-weight:800;">Bryce Fudge</div>
+      <div class="small">Software Engineer & IT Professional</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#coursework">Coursework</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+
+<section class="hero">
+  <div>
+    <h1>Hi, I'm Bryce — I build software and IT solutions that work.</h1>
+    <p>Recent Computer Science graduate with hands-on experience in cloud computing, Android apps, machine learning, IT administration, and systems-level projects. I create practical solutions that solve real problems.</p>
+    <a class="cta cta-primary" href="#contact">Work with me</a>
+    <a class="cta cta-secondary" href="#projects">See my work</a>
+  </div>
+  <aside class="card hero-right">
+    <h3 style="margin-top:0;">Quick Info</h3>
+    <div class="small">Location</div>
+    <div style="font-weight:700;">California, USA</div>
+    <div style="margin-top:12px;" class="small">Email</div>
+    <div><a href="mailto:your.email@example.com" style="color:#111827;">your.email@example.com</a></div>
+    <div style="margin-top:12px;" class="small">Resume</div>
+    <a href="#" onclick="alert('Add your resume link here')" class="small">Download PDF</a>
+    <div style="margin-top:12px;" class="small">Social</div>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </aside>
+</section>
+
+<!-- Skills -->
+
+<section id="skills" style="margin-top:40px;">
+  <h2>Technical Skills</h2>
+
+  <div class="skill-group">
+    <div class="skill-group-title">Languages</div>
+    <div class="skills">
+      <span class="pill">Python</span>
+      <span class="pill">Java</span>
+      <span class="pill">C</span>
+      <span class="pill">R</span>
+      <span class="pill">Kotlin</span>
+      <span class="pill">Swift</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <div class="skill-group-title">Frameworks & Tools</div>
+    <div class="skills">
+      <span class="pill">Android Jetpack Compose</span>
+      <span class="pill">Docker</span>
+      <span class="pill">Git / GitHub</span>
+      <span class="pill">SQL / Databases</span>
+      <span class="pill">Wireshark</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <div class="skill-group-title">Platforms & Environments</div>
+    <div class="skills">
+      <span class="pill">AWS / Azure</span>
+      <span class="pill">Windows Server</span>
+      <span class="pill">Linux / Ubuntu</span>
+      <span class="pill">Cloud Deployments</span>
+      <span class="pill">Networking & Security</span>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+
+<section id="projects" style="margin-top:40px;">
+  <h2>Key Projects</h2>
+  <div class="projects">
+
+```
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">NBA Over/Under Predictor</div>
+  <div class="meta">Python, Machine Learning (3 models), Kaggle Dataset</div>
+  <p class="small">Trained AI to predict NBA game total points using multiple ML approaches. Focused on feature engineering, preprocessing, and model evaluation.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">Brain Boost Alarm App</div>
+  <div class="meta">Kotlin, Android</div>
+  <p class="small">Alarm app requiring users to complete a game before dismissal to stop oversleeping. Emphasis on UX, performance, and reliability.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">Plant Store Web App</div>
+  <div class="meta">Java, SQL, Full-Stack Web</div>
+  <p class="small">Database-driven plant shop with inventory display and simulated purchasing workflow, demonstrating full-stack skills.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">Weather App</div>
+  <div class="meta">Java/Kotlin, Android</div>
+  <p class="small">Mobile app showing live weather data using API integration with smooth UI/UX.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">File System & Disk Simulator</div>
+  <div class="meta">C, Computer Architecture</div>
+  <p class="small">Implemented simulated file system and disk operations in C to explore low-level storage and memory management.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">Ransomware Detection System</div>
+  <div class="meta">Python, Security</div>
+  <p class="small">Prototype system analyzing file activity patterns to flag potential ransomware behavior.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">Wireshark Packet Analysis</div>
+  <div class="meta">Networking, Security</div>
+  <p class="small">Captured and analyzed network traffic to understand protocols and detect anomalies.</p>
+</article>
+
+<article class="card">
+  <div class="project-img"></div>
+  <div class="project-title">CILISP Interpreter</div>
+  <div class="meta">C, Compiler Design</div>
+  <p class="small">Mini Lisp interpreter with parsing, evaluation, and memory management implemented in C.</p>
+</article>
+```
+
+  </div>
+</section>
+
+<!-- Coursework -->
+
+<section id="coursework" style="margin-top:40px;">
+<h2>Relevant Coursework & System Knowledge</h2>
+<div class="coursework">
+  <div class="card">Object-Oriented Programming</div>
+  <div class="card">Operating Systems</div>
+  <div class="card">Software Engineering</div>
+  <div class="card">Analysis of Algorithms</div>
+  <div class="card">Computer Architecture & Assembly</div>
+  <div class="card">Machine Learning & Data Mining</div>
+  <div class="card">Image Analysis & Pattern Recognition</div>
+  <div class="card">Computer Networks</div>
+</div>
+</section>
+
+<!-- Contact -->
+
+<section id="contact" style="margin-top:40px;">
+<h2>Contact Me</h2>
+<div class="card">
+<p class="small">Reach out to discuss software engineering, IT, or collaborative projects.</p>
+<form id="contactForm" onsubmit="submitForm(event)">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+    <input id="name" name="name" placeholder="Your Name" required>
+    <input id="email" name="email" type="email" placeholder="Your Email" required>
+  </div>
+  <input id="subject" name="subject" placeholder="Subject">
+  <textarea id="message" name="message" placeholder="Message..." required></textarea>
+  <button type="submit" id="sendBtn">Send Message</button>
+  <div id="formResult" class="small" style="margin-top:8px;"></div>
+</form>
+</div>
+</section>
+
+<footer>© <span id="year"></span> Bryce Fudge — CS Graduate | Software & IT Projects | California, USA</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+function submitForm(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const message=document.getElementById('message').value.trim();
+  if(!name||!email||!message){document.getElementById('formResult').textContent='Fill all fields.';return;}
+  const btn=document.getElementById('sendBtn');btn.disabled=true;btn.textContent='Sending...';
+  setTimeout(()=>{btn.disabled=false;btn.textContent='Send Message';document.getElementById('formResult').textContent='Message sent!';document.getElementById('contactForm').reset();},900);
+}
+</script>
+
+</body>
+</html>
